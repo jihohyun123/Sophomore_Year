@@ -1,0 +1,88 @@
+--------------------------------------------------------------------------------
+A result of running my Problem3.java program (separated for clarity):
+
+Timing for frag1(10): 4252
+Timing for frag1(100): 27564
+Timing for frag1(1000): 268422
+Timing for frag1(10000): 2641329
+
+Timing for frag2(10): 2235
+Timing for frag2(100): 60804
+Timing for frag2(1000): 5785938
+Timing for frag2(10000): 591254938
+
+Timing for foo(10): 1092
+Timing for foo(100): 1553
+Timing for foo(1000): 1919
+Timing for foo(10000): 1993
+
+I had my program run each fragment 4 times using the numbers 
+10, 100, 1000, and 10000. Then, I analyzed the results under the assumption
+that the ratios between the different times and inputs would match the order
+that I predicted in my written homework, ie.(T2/T1)=(N2/N1)--->T2=(N2/N1)*T1
+where T2's actual value can be looked at in comparison with if it fits the
+runtime of its big O order.
+--------------------------------------------------------------------------------
+For fragment 1, I predicted in my big O analysis in the written homework
+that it would be of order O(N), which the numbers seem to support:
+
+T(10)=4,252
+analysis: if linear, T(100) should be (100/10)*T(10)=(100/10)*4252 = 42,520
+T(100) actual value: 27,564
+
+T(100)=27,564
+analysis: T(1,000) should be (1,000/100)*T(100)=(100/10)*27,564 = 275,640
+T(1,000) actual value: 268,422
+
+T(1,000)=268,422
+analysis: T(10,000) should be (10,000/1,000)*T(1,000)=10*268422 = 2,684,220
+T(10,000) actual value:2,641,329
+
+After the initial value, runtime increases in a linear fashion as 
+N increases because the theoretical and actual values are very close.
+--------------------------------------------------------------------------------
+
+For fragment 2, I predicted in my big O analysis in the written homework 
+that it would be of order O(N^2), which the numbers seem to support:
+
+T(10)=2,235
+analysis: T(100) should be (100^2/10^2)*T(10)= (100^2/10^2)*2,235 = 223,500
+T(100) actual value: 60,804
+
+T(100)=60,804
+analysis: T(1000) should be (1000^2/100^2)*T(100)=(1000^2/100^2)*60,804 = 6,080,400
+T(1,000) actual value: 5,785,938
+
+T(1,000)=5,785,938
+analysis: T(10,000) should be (10,000^2/1000^2)*T(1,000) = 578,593,800
+T4 actual value: 591,254,938
+
+After the initial value, the theoretical and actual values of T are very close,
+indicating a big O function of O(N^2)
+--------------------------------------------------------------------------------
+
+For fragment 3, I predicted in my big O analysis in the written homework 
+that it would be of order O(log(N)), which the numbers seem to support:
+
+T(10)=1,092
+T(100)=1,553
+T(1000)=1,919
+T(10000)=1,993
+
+T(10)=1,092
+analysis: T(100) should be (log(100)/log(10))*T(10)= 2*1,092=2,184
+T(100) actual value: 1,553
+
+T(100)=1,553
+analysis: T(1000) should be (log(1,000)/log(100))*T(100) = 2*1,553 = 3,106
+T(1000) actual value: 1,919
+
+T(1000)=1,919
+analysis: T(10,000) should be (log(10,000)/log(1,000))*T(1,000) = 2*1,919 = 3,838
+T(10000) actual value: 1,993
+
+As N increased by factors of 10, T increases much more
+slowly. I theorize that T doesn't exactly match because there is
+some constant factor that is affecting the results. However, the data still
+matches that of a O(log(N)) runtime.
+--------------------------------------------------------------------------------

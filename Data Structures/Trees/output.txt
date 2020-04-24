@@ -1,0 +1,25 @@
+""""""""": 1
+-------------there: 3
+1: 9
+2: 9
+a: 2, 5
+and: 4, 7, 8
+andrey: 4, 7
+going: 2, 5
+here:(!: 4
+here:(:(:("""""": 7
+in: 8
+is: 8
+isnt: 7
+isn’t: 4
+on: 2, 5
+out: 3
+program: 8
+somewhere: 3
+somewhere~~~~: 6
+there: 6
+there’s: 2, 5
+this: 8
+war: 2, 5
+your: 8
+~~~~out: 6

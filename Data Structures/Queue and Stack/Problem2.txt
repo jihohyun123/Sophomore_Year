@@ -1,0 +1,2 @@
+The runtime of enqueue is constant O (1).
+The runtime of dequeue is worst case O(N), best case constant.
